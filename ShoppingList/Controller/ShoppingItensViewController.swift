@@ -9,7 +9,11 @@ import UIKit
 
 class ShoppingItensViewController: UITableViewController {
     var shoppingListOfThisItens: ShoppingList?
-    var shoppingItens: [ShoppingItem]?
+    var shoppingItens: [ShoppingItem]? {
+        didSet {
+            shoppingListOfThisItens?.itens = shoppingItens!
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +41,6 @@ class ShoppingItensViewController: UITableViewController {
     func insertIntoShoppingLists(_ itemText: String) {
         let newItem = ShoppingItem(name: itemText, icon: "pencil", wasAlreadyPicked: false)
         
-        shoppingListOfThisItens?.itens.insert(newItem, at: 0)
         shoppingItens!.insert(newItem, at: 0)
     }
  
@@ -57,5 +60,16 @@ class ShoppingItensViewController: UITableViewController {
         itemCell.imageView?.image = UIImage(systemName: actualItem.icon)
         
         return itemCell
+    }
+    
+    
+    //TODO: Arrumar esse método
+    // Checkmark nao desmarca
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var selectedItem = shoppingItens![indexPath.row]
+                
+        tableView.cellForRow(at: indexPath)?.accessoryType = selectedItem.wasAlreadyPicked ? .none : .checkmark
+
+        selectedItem.wasAlreadyPicked.toggle()
     }
 }
