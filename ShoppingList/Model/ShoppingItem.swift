@@ -10,5 +10,5 @@ import Foundation
 struct ShoppingItem {
     var name: String
     var icon: String
-    var isSelected: Bool
+    var wasAlreadyPicked: Bool
 }

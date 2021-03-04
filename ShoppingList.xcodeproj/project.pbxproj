@@ -15,6 +15,8 @@
 		8426BDCF25ED9FCB00647CFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8426BDCD25ED9FCB00647CFB /* LaunchScreen.storyboard */; };
 		8426BDDD25EDA3E000647CFB /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426BDDC25EDA3E000647CFB /* ShoppingList.swift */; };
 		8426BDE025EDAC3700647CFB /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426BDDF25EDAC3700647CFB /* ShoppingItem.swift */; };
+		84BE3D7125F18F7E004FDFE8 /* ShoppingItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE3D7025F18F7E004FDFE8 /* ShoppingItensViewController.swift */; };
+		84BE3D7525F194A1004FDFE8 /* updateNewInsertInTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE3D7425F194A1004FDFE8 /* updateNewInsertInTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		8426BDD025ED9FCB00647CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8426BDDC25EDA3E000647CFB /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 		8426BDDF25EDAC3700647CFB /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		84BE3D7025F18F7E004FDFE8 /* ShoppingItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItensViewController.swift; sourceTree = "<group>"; };
+		84BE3D7425F194A1004FDFE8 /* updateNewInsertInTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateNewInsertInTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		8426BDC125ED9FC800647CFB /* ShoppingList */ = {
 			isa = PBXGroup;
 			children = (
+				84BE3D7325F19493004FDFE8 /* Shared */,
 				8426BDD925EDA01100647CFB /* Model */,
 				8426BDD825EDA00D00647CFB /* Controller */,
 				8426BDD725EDA00900647CFB /* View */,
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8426BDC625ED9FC900647CFB /* TableViewController.swift */,
+				84BE3D7025F18F7E004FDFE8 /* ShoppingItensViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -95,6 +101,14 @@
 				8426BDDF25EDAC3700647CFB /* ShoppingItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		84BE3D7325F19493004FDFE8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				84BE3D7425F194A1004FDFE8 /* updateNewInsertInTableView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +181,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BE3D7125F18F7E004FDFE8 /* ShoppingItensViewController.swift in Sources */,
+				84BE3D7525F194A1004FDFE8 /* updateNewInsertInTableView.swift in Sources */,
 				8426BDC725ED9FC900647CFB /* TableViewController.swift in Sources */,
 				8426BDDD25EDA3E000647CFB /* ShoppingList.swift in Sources */,
 				8426BDC325ED9FC900647CFB /* AppDelegate.swift in Sources */,

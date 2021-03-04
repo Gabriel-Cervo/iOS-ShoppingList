@@ -7,8 +7,13 @@
 
 import Foundation
 
-struct ShoppingList {
+class ShoppingList {
     var name: String
     var icon: String
     var itens = [ShoppingItem]()
+    
+    init(name: String, icon: String) {
+        self.name = name
+        self.icon = icon
+    }
 }

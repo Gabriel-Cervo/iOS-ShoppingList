@@ -47,9 +47,16 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected \(shoppingLists[indexPath.row])")
+        let selectedShoppingList = shoppingLists[indexPath.row]
         
-        //TODO: Go to sub-list
+        guard let shoppingItensVC = storyboard?.instantiateViewController(identifier: "ShoppingItens") as? ShoppingItensViewController else {
+            print("Cannot instantiate view controller as ShoppingItensViewController")
+            return
+        }
+        
+        shoppingItensVC.shoppingListOfThisItens = selectedShoppingList
+        
+        navigationController?.pushViewController(shoppingItensVC, animated: true)
     }
     
     //MARK: Custom Methods
@@ -62,8 +69,8 @@ class TableViewController: UITableViewController {
             let newShoppingList = ShoppingList(name: text, icon: "cart")
             
             self?.addNewShoppingList(newShoppingList)
-            self?.insertNewRowInTableView()
-            
+            updateNewInsertIn((self?.tableView)!)
+
             alertViewController?.dismiss(animated: true)
         }))
         alertViewController.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
@@ -74,13 +81,5 @@ class TableViewController: UITableViewController {
     func addNewShoppingList(_ newShoppingList: ShoppingList) {
         shoppingLists.insert(newShoppingList, at: 0)
     }
-    
-    func insertNewRowInTableView() {
-        tableView.beginUpdates()
-        tableView.insertRows(at: [IndexPath.init(row: 0, section: 0)], with: .automatic)
-        tableView.endUpdates()
-    }
-
-
 }
 

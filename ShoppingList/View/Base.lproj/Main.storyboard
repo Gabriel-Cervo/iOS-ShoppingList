@@ -51,6 +51,49 @@
             </objects>
             <point key="canvasLocation" x="571.01449275362324" y="23.4375"/>
         </scene>
+        <!--Shopping Itens View Controller-->
+        <scene sceneID="I1G-uT-gbX">
+            <objects>
+                <tableViewController storyboardIdentifier="ShoppingItens" id="LdU-93-BGw" customClass="ShoppingItensViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WMn-Eb-9cp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ShoppingItemCell" textLabel="jeY-bZ-rpn" imageView="ezI-ma-KgW" rowHeight="62" style="IBUITableViewCellStyleDefault" id="D5F-b7-uzZ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D5F-b7-uzZ" id="s2c-hy-51b">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="62"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jeY-bZ-rpn">
+                                            <rect key="frame" x="59" y="0.0" width="316" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ezI-ma-KgW">
+                                            <rect key="frame" x="21.25" y="21.5" width="21.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LdU-93-BGw" id="qHp-xG-GRk"/>
+                            <outlet property="delegate" destination="LdU-93-BGw" id="dRn-Zn-TBW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Ibz-xZ-UDE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2L-db-xVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1480" y="23"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ugT-Rp-ILl">
             <objects>
