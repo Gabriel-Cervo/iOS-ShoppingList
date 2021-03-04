@@ -58,17 +58,14 @@ class ShoppingItensViewController: UITableViewController {
         let itemCell = tableView.dequeueReusableCell(withIdentifier: "ShoppingItemCell", for: indexPath)
         itemCell.textLabel?.text = actualItem.name
         itemCell.imageView?.image = UIImage(systemName: actualItem.icon)
+        itemCell.accessoryType = actualItem.wasAlreadyPicked ? .checkmark : .none
         
         return itemCell
     }
     
-    //TODO: Arrumar esse método
-    // Checkmark nao desmarca
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedItem = shoppingItens![indexPath.row]
+        shoppingItens![indexPath.row].wasAlreadyPicked.toggle()
                 
-        tableView.cellForRow(at: indexPath)?.accessoryType = selectedItem.wasAlreadyPicked ? .none : .checkmark
-
-        selectedItem.wasAlreadyPicked.toggle()
-    }
+        tableView.cellForRow(at: indexPath)?.accessoryType = shoppingItens![indexPath.row].wasAlreadyPicked ? .checkmark : .none
+        }
 }
