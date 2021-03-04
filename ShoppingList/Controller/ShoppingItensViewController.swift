@@ -62,7 +62,6 @@ class ShoppingItensViewController: UITableViewController {
         return itemCell
     }
     
-    
     //TODO: Arrumar esse método
     // Checkmark nao desmarca
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
