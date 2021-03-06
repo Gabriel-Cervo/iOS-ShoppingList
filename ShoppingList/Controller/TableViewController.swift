@@ -59,6 +59,13 @@ class TableViewController: UITableViewController {
         navigationController?.pushViewController(shoppingItensVC, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteShoppingListAt(at: indexPath)
+            deleteRowFrom(tableView, at: indexPath)
+        }
+    }
+    
     //MARK: Custom Methods
     @objc func showNewShoppingItemAlert() {
         let alertViewController = UIAlertController(title: "Digite o nome da sua lista:", message: nil, preferredStyle: .alert)
@@ -80,6 +87,10 @@ class TableViewController: UITableViewController {
     
     func addNewShoppingList(_ newShoppingList: ShoppingList) {
         shoppingLists.insert(newShoppingList, at: 0)
+    }
+    
+    func deleteShoppingListAt(at indexPath: IndexPath) {
+        shoppingLists.remove(at: indexPath.row)
     }
 }
 
