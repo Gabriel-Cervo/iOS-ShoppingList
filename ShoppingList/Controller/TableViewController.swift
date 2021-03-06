@@ -15,12 +15,11 @@ class TableViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showNewShoppingItemAlert))
         
-        // testing
+//         testing
         let testList: [ShoppingList] = [
             ShoppingList(name: "Supermercado", icon: "cart"),
-            ShoppingList(name: "Eletrônicos", icon: "bag"),
         ]
-        
+
         for item in testList {
             shoppingLists.append(item)
         }
