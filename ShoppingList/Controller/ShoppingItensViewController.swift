@@ -22,7 +22,7 @@ class ShoppingItensViewController: UITableViewController {
         shoppingItens = shoppingListOfThisItens?.itens
     }
     
-    //MARK: TableViewMethods
+    //MARK: TableView Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shoppingItens!.count
     }
@@ -54,8 +54,7 @@ class ShoppingItensViewController: UITableViewController {
         }
     }
     
-    //MARK: Shopping Itens methods
-    
+    //MARK: ShoppingItens Methods
     @objc func addNewItemInShoppingList() {
         let alertVC = UIAlertController(title: "Digite o nome do novo item:", message: nil, preferredStyle: .alert)
         alertVC.addTextField()
