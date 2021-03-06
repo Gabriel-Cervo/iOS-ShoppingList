@@ -19,6 +19,8 @@ class TableViewController: UITableViewController {
         let testList: [ShoppingList] = [
             ShoppingList(name: "Supermercado", icon: "cart"),
         ]
+        
+        testList[0].itens.append(ShoppingItem(name: "Pão", icon: "record.circle", wasAlreadyPicked: false))
 
         for item in testList {
             shoppingLists.append(item)

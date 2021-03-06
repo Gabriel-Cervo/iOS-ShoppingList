@@ -45,6 +45,8 @@ class ShoppingItensViewController: UITableViewController {
         shoppingItens![indexPath.row].wasAlreadyPicked.toggle()
                 
         tableView.cellForRow(at: indexPath)?.accessoryType = shoppingItens![indexPath.row].wasAlreadyPicked ? .checkmark : .none
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
