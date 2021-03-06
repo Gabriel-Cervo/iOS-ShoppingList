@@ -72,7 +72,7 @@ class ShoppingItensViewController: UITableViewController {
     }
     
     func insertIntoShoppingLists(_ itemText: String) {
-        let newItem = ShoppingItem(name: itemText, icon: "pencil", wasAlreadyPicked: false)
+        let newItem = ShoppingItem(name: itemText, icon: "record.circle", wasAlreadyPicked: false)
         
         shoppingItens!.insert(newItem, at: 0)
     }
