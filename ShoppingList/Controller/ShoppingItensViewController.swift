@@ -22,28 +22,6 @@ class ShoppingItensViewController: UITableViewController {
         shoppingItens = shoppingListOfThisItens?.itens
     }
     
-    @objc func addNewItemInShoppingList() {
-        let alertVC = UIAlertController(title: "Digite o nome do novo item:", message: nil, preferredStyle: .alert)
-        alertVC.addTextField()
-        alertVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
-        alertVC.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { [weak self, weak alertVC] (UIAlertAction) in
-            guard let textFieldText = alertVC?.textFields?[0].text else { return }
-            
-            self?.insertIntoShoppingLists(textFieldText)
-            updateNewInsertIn((self?.tableView)!)
-            
-            alertVC?.dismiss(animated: true)
-        }))
-        
-        present(alertVC, animated: true)
-    }
-    
-    func insertIntoShoppingLists(_ itemText: String) {
-        let newItem = ShoppingItem(name: itemText, icon: "pencil", wasAlreadyPicked: false)
-        
-        shoppingItens!.insert(newItem, at: 0)
-    }
- 
     //MARK: TableViewMethods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shoppingItens!.count
@@ -67,5 +45,40 @@ class ShoppingItensViewController: UITableViewController {
         shoppingItens![indexPath.row].wasAlreadyPicked.toggle()
                 
         tableView.cellForRow(at: indexPath)?.accessoryType = shoppingItens![indexPath.row].wasAlreadyPicked ? .checkmark : .none
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteFromShoppingList(at: indexPath)
+            deleteRowFrom(tableView, at: indexPath)
         }
+    }
+    
+    //MARK: Shopping Itens methods
+    
+    @objc func addNewItemInShoppingList() {
+        let alertVC = UIAlertController(title: "Digite o nome do novo item:", message: nil, preferredStyle: .alert)
+        alertVC.addTextField()
+        alertVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
+        alertVC.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { [weak self, weak alertVC] (UIAlertAction) in
+            guard let textFieldText = alertVC?.textFields?[0].text else { return }
+            
+            self?.insertIntoShoppingLists(textFieldText)
+            updateNewInsertIn((self?.tableView)!)
+            
+            alertVC?.dismiss(animated: true)
+        }))
+        
+        present(alertVC, animated: true)
+    }
+    
+    func insertIntoShoppingLists(_ itemText: String) {
+        let newItem = ShoppingItem(name: itemText, icon: "pencil", wasAlreadyPicked: false)
+        
+        shoppingItens!.insert(newItem, at: 0)
+    }
+    
+    func deleteFromShoppingList(at indexPath: IndexPath) {
+        shoppingItens?.remove(at: indexPath.row)
+    }
 }

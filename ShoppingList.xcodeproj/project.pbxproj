@@ -17,6 +17,7 @@
 		8426BDE025EDAC3700647CFB /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426BDDF25EDAC3700647CFB /* ShoppingItem.swift */; };
 		84BE3D7125F18F7E004FDFE8 /* ShoppingItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE3D7025F18F7E004FDFE8 /* ShoppingItensViewController.swift */; };
 		84BE3D7525F194A1004FDFE8 /* updateNewInsertInTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE3D7425F194A1004FDFE8 /* updateNewInsertInTableView.swift */; };
+		84BE3D7925F3A4D8004FDFE8 /* deleteRowFromTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE3D7825F3A4D8004FDFE8 /* deleteRowFromTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8426BDDF25EDAC3700647CFB /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		84BE3D7025F18F7E004FDFE8 /* ShoppingItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItensViewController.swift; sourceTree = "<group>"; };
 		84BE3D7425F194A1004FDFE8 /* updateNewInsertInTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateNewInsertInTableView.swift; sourceTree = "<group>"; };
+		84BE3D7825F3A4D8004FDFE8 /* deleteRowFromTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteRowFromTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				84BE3D7425F194A1004FDFE8 /* updateNewInsertInTableView.swift */,
+				84BE3D7825F3A4D8004FDFE8 /* deleteRowFromTableView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BE3D7125F18F7E004FDFE8 /* ShoppingItensViewController.swift in Sources */,
+				84BE3D7925F3A4D8004FDFE8 /* deleteRowFromTableView.swift in Sources */,
 				84BE3D7525F194A1004FDFE8 /* updateNewInsertInTableView.swift in Sources */,
 				8426BDC725ED9FC900647CFB /* TableViewController.swift in Sources */,
 				8426BDDD25EDA3E000647CFB /* ShoppingList.swift in Sources */,
