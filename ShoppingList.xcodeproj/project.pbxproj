@@ -73,7 +73,6 @@
 				8426BDC225ED9FC900647CFB /* AppDelegate.swift */,
 				8426BDC425ED9FC900647CFB /* SceneDelegate.swift */,
 				8426BDCB25ED9FCB00647CFB /* Assets.xcassets */,
-				8426BDCD25ED9FCB00647CFB /* LaunchScreen.storyboard */,
 				8426BDD025ED9FCB00647CFB /* Info.plist */,
 			);
 			path = ShoppingList;
@@ -82,6 +81,7 @@
 		8426BDD725EDA00900647CFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8426BDCD25ED9FCB00647CFB /* LaunchScreen.storyboard */,
 				8426BDC825ED9FC900647CFB /* Main.storyboard */,
 			);
 			path = View;
